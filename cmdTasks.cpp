@@ -4,7 +4,15 @@
 
 using namespace std;
 
-void importTasks(vector<string>* taskVector){
+void printVector(vector<string>& vect){
+
+    for(int i = 0; i<vect.size(); i++){
+        cout<<i<<": "<<vect[i]<<endl;
+    }
+
+}
+
+void importTasks(vector<string>& taskVector){
     //use task pointer to shove the tasks straight into the vector 8)
 
 
@@ -12,6 +20,10 @@ void importTasks(vector<string>* taskVector){
 
 
 int main(int argc, char* argv[]){ //main natively processes cmd line stuff into [numberOfArgs,argsPassed]
+
+    vector<string> myVect = {"a","b","c"};
+
+    printVector(myVect);
 
     if(argc > 3){
         //repurpose this code at the end when you catch exception that no valid commands were passed
